@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>과제</title>
+	<style>
+		#add-btn{
+			padding: 5px 10px;
+			border: 0;
+			background: #f80; color: white;
+			border-radius: 5px;
+		}
+		ul{ 
+			padding: 0; 
+			list-style-position: inside;
+		}
+		li{
+			border-bottom: 1px solid #999;
+			padding: 5px 0;
+		}
+		.active{ background: #abc; } /* step3: 목록 클릭 스타일 */
+	</style>
+</head>
+<body>
+  <h1>내가 수강한 수업</h1>
+  <table border=1>
+  <tr><th>1-1</th><th>1-2</th></tr>
+  <tr><td>물리학및실험(1)<br>미분적분학(1)<br>교육심리학<br>논리적글쓰기<br> 갈등과분쟁의세계사<br> 일본어(1)</td>
+  <td>물리학및실험(2)<br> 미분적분학(2)<br> 삶의윤리학<br>확률과통계<br> 창의공학설계<br>Computational Thinking</td></tr>
+  <tr><th>2-1</th><th>2-2</th></tr>
+  <tr><td>기초전기전자실험 <br> 공학수학(1)<br> 생명과인간<br> 취창업진로설계<br>회로이론(1)<br>전자기학(1)</td>
+  <td>신호및시스템<br> 공학수학(2)<br>논리회로<br>전자기학(2)</td></tr>
+  <tr><th>3-1</th><th>3-2</th></tr>
+  <tr><td>통신시스템<br>마이크로파공학<br>반도체공학<br>제어공학<br>전자회로(1)</td><tr>
+  
+  </table>
+
+	<h1>나의 관심 분야</h1>
+	<ul>
+		<li>영화</li>
+		<li>유튜브,OTT</li>
+		<li>독서</li>
+		<li>테니스</li>
+	</ul>
+	<h1>프로젝트 주제</h1>
+	<button id="add-btn">목록 추가</button>
+	<ul id='list'>
+		<li>할일목록</li>
+		<li>시간표</li>
+		<li>노래차트</li>
+		<li>게임만들기</li>
+	</ul>
+
+<script>
+
+	// 변수 초기화
+	var title = document.getElementById('title'); 
+	var list = document.getElementById('list');
+	var li = list.getElementsByTagName('li');
+	var addBtn = document.getElementById('add-btn');	// 목록 추가 버튼
+
+	// 이벤트리스너
+	list.addEventListener('click', activeItem); 
+
+	function activeItem(event){
+		// 클릭한 노드가 li이면 
+		if(event.target.nodeName == 'LI'){
+			// event.target은 클릭한 객체를 의미
+			title.innerHTML = event.target.innerText;	
+
+			// 목록 스타일 초기화
+			for(var i = 0; i < event.target.parentNode.children.length; i++){
+				event.target.parentNode.children[i].removeAttribute('class');
+			}
+			// 클릭한 목록 스타일 지정
+			event.target.setAttribute('class', 'active'); // 클릭한 대상			
+		}	// end if
+	}	// end function		
+
+	// 목록 추가
+	addBtn.addEventListener('click', function(){
+		var txt = prompt('제목 입력');
+		list.innerHTML += '<li>' + txt + '</li>';
+	});
+
+</script>	
+
+</body>
+</html>
