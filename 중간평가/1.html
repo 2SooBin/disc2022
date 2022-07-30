@@ -1,0 +1,23 @@
+<html>
+<head>
+<h1></h1>
+<script>
+sqrttry = []
+trialnum = []
+high = 3
+low = 2
+delta = 0.00000001
+for ( k=0 ; k<100 ; k++ ) {
+  sqrttry[k] = (high + low)/2
+  sqrx = sqrttry[k] * sqrttry[k] * sqrttry[k]
+  trialnum[k] = k+1
+  if ( sqrx > 10 ) high = sqrttry[k]
+  else if ( sqrx < 10 ) low = sqrttry[k]
+  if ( Math.abs(10-sqrx) < delta ) break
+}
+document.querySelector("h1").innerHTML += "세제곱 근의 값: " + sqrttry[k] + "<br>"
+document.querySelector("h1").innerHTML += "시도 횟수 : " + trialnum[k]
+
+</script>
+</head>
+</html>
