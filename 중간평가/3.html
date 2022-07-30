@@ -1,0 +1,36 @@
+<html>
+<head>
+<script>
+var obj = [
+  {
+    name : "Jinsu",
+    age : "21"
+  },
+  {
+    name : "Chulsu",
+    age : "20"
+  }]
+
+window.onload = function() {
+  var bu = document.getElementsByTagName('button')
+    for (j =0; j<3; j ++) {
+
+    bu[j].onclick = function() {
+    avg = (Number(obj[0].age) + Number(obj[1].age))/2
+    this.innerHTML += avg 
+      for (i=0; i<2; i++) {
+      obj[i].age = Number(obj[i].age) + 1
+      }
+    }
+  }
+}
+</script>
+</head>
+<body>
+<button> sum </button>
+<button> sum </button>
+<button> sum </button>
+
+</body>
+</html>
+
