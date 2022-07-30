@@ -1,0 +1,34 @@
+<html>
+<head>
+	<style>
+		.active{ background: orange; }
+	</style>
+<button id="add-btn">내용 추가</button>
+<ul id='list'>
+</ul>
+
+<script>
+var list = document.getElementById('list');
+var li = list.getElementsByTagName('li');
+var addBtn = document.getElementById('add-btn');
+
+list.addEventListener('click', activeItem); 
+
+function activeItem(event){
+  if(event.target.nodeName == 'LI'){
+    for(var i = 0; i < event.target.parentNode.children.length; i++){
+				event.target.parentNode.children[i].removeAttribute('class');
+			}
+		event.target.setAttribute('class', 'active');	
+	}
+}
+
+
+addBtn.addEventListener('click', function(){
+  var txt = prompt('제목 입력');
+  list.innerHTML += '<li>' + txt + '</li>';
+});
+
+</script>	
+</head>
+</html>
