@@ -1,0 +1,110 @@
+*{
+    list-style : none;
+    text-decoration : none;
+    border-collapse : collapse;
+    margin: 0px;
+    padding: 0px;
+    color : #000;
+}
+
+@font-face {
+    font-family: '양진체';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EarlyFontDiary';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.intro_bg{
+    background-image : url("image/mini.jfif");
+    background-size : 1700px; 1080px;
+    width : 100%;
+    height : 750px;
+}
+
+.header {
+    display : flex;
+    width : 1280px;
+    margin : auto;
+    height : 86px;
+    /* background-color : red; */
+}
+
+.nav {
+    display : flex;
+    justify-content : flex-start;
+    line-height : 70px;
+    width : calc(1280px - 300px);
+    /* background-color : yellow; */
+    padding : 20px;
+}
+
+.nav > li {
+    margin-right : 80px;
+}
+
+.nav > li > a {
+    color : black;
+    font-family : 'EarlyFontDiary';
+    font-weight : bold;
+}
+
+.intro_text {
+    width : 1280px;
+    margin : 80px auto 231px auto;
+    /* background-color : green; */
+}
+
+.intro_text > h1 {
+    font-family: 양진체;
+    font-size : 48px;
+    color : black;
+    padding : 20px;
+}
+
+.intro_text > h1 > span {
+    font-size : 60px;
+    color : red;
+    font-weight : bold;
+    text-shadow : 5px 5px 5px black;
+}
+
+.intro_text > h2 {
+    font-family: 'EarlyFontDiary';
+    font-size : 30px;
+    font-weight : bold;
+    color : black;
+    padding : 20px;
+}
+
+.genre {
+    display : flex;
+    justify-content : flex-start;
+    width : 1280px;
+    /* background-color : yellow; */
+    margin : -100px auto auto 80px;
+    padding : 20px;
+}
+
+
+.genre > button {
+    margin-right : 70px;
+    padding : 10px;
+    border-radius : 5px;
+    border : 0;
+    background-color : blue;
+}
+
+.genre > button > a {
+    color : black;
+    font-family : 'EarlyFontDiary';
+    font-weight : bold;
+    font-size : 30px;
+    color : yellow;
+}
