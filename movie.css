@@ -56,31 +56,201 @@
 }
 
 .container {
-    margin : 30px auto;
+    margin : 50px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    /*grid-template-rows: 1fr 1fr 1fr;*/
+    grid-template-rows: 1fr 1fr 1fr;
     max-width: 1280px;
     height : 600px;
-    /*background-color: blue;*/
+    /* background-color: blue; */
 }
-.movie {
-    margin: 15px auto;
+
+.img1 {
+    height: 400px;
+    width : 280px;
+    text-align: center;
+}
+
+.img2 {
+    height: 400px;
+    width : 280px;
+    text-align: center;
+}
+
+.img3 {
+    height: 400px;
+    width : 280px;
+    text-align: center;
+}
+
+.img4 {
     height: 400px;
     width : 280px;
     text-align: center;
     
 }
 
-.movie > ul{
+.movie > ul {
+    padding-top : 20px;
+
+}
+
+.movie > ul > li{
+    padding : 8px;
+    color : white;
     font-family: 'EarlyFontDiary';
     font-weight : bold;
     font-size : 18px;
-    margin-top : 420px;
     text-align : left;
 }
 
-.movie >ul > li{
-    padding : 8px;
+
+.more1 {
+    font-family: 'EarlyFontDiary';
+    display : block;
+    font-weight : bold;
+    font-size : 18px;
+    line-height : 40px;
+    width : 120px;
+    margin: -300px auto auto 80px;
     color : white;
+    background : red;
+    position : fixed;
+    opacity : 0;
+    transition:0.5s all;
+    border-radius : 5px;
+}
+.more2 {
+    font-family: 'EarlyFontDiary';
+    display : block;
+    font-weight : bold;
+    font-size : 18px;
+    line-height : 40px;
+    width : 120px;
+    margin: -300px auto auto 80px;
+    color : #fff;
+    background : red;
+    position : fixed;
+    opacity : 0;
+    transition:0.5s all;
+    border-radius : 5px;
+}
+.more3 {
+    font-family: 'EarlyFontDiary';
+    display : block;
+    font-weight : bold;
+    font-size : 18px;
+    line-height : 40px;
+    width : 120px;
+    margin: -300px auto auto 80px;
+    background : red;
+    position : fixed;
+    opacity : 0;
+    transition:0.5s all;
+    border-radius : 5px;
+}
+.more4 {
+    font-family: 'EarlyFontDiary';
+    display : block;
+    font-weight : bold;
+    font-size : 18px;
+    line-height : 40px;
+    width : 120px;
+    margin: -300px auto auto 80px;
+    background : red;
+    opacity : 0;
+    transition:0.5s;
+    position : fixed;
+    border-radius : 5px;
+}
+
+
+
+.one:hover .more1 {opacity : 1;}
+.two:hover .more2 {opacity : 1;}
+.three:hover .more3 {opacity : 1;}
+.four:hover .more4 {opacity : 1;}
+
+
+.pop-up-box1{
+    display : block;
+    background-color : gray;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    padding : 10px 15px;
+    display : none;
+}
+
+.pop-up-box1.active{
+    display : block;
+}
+
+.pop-up-box2{
+    display : block;
+    background-color : gray;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    padding : 10px 15px;
+    display : none;
+}
+
+.pop-up-box2.active{
+    display : block;
+}
+.pop-up-box3{
+    display : block;
+    background-color : gray;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    padding : 10px 15px;
+    display : none;
+}
+
+.pop-up-box3.active{
+    display : block;
+}
+.pop-up-box4{
+    display : block;
+    background-color : gray;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    padding : 10px 15px;
+    display : none;
+}
+
+.pop-up-box4.active{
+    display : block;
+}
+
+.btn-clo {
+    /* background-color : yellow; */
+    margin-bottom : 10px;
+    text-align : right;
+    cursor : pointer;
+    font-size : 30px;
+    font-weight : bold;
+}
+
+.btn-clo:hover { color : orange;}
+
+.pop-up-bg{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    background-color : rgba(0,0,0,0.7);
+    top : 0;
+    left : 0;
+    display : none;
+}
+
+.pop-up-bg.active{
+    display: block;
 }
