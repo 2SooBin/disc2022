@@ -232,9 +232,9 @@
 }
 
 .btn-clo {
-    /* background-color : yellow; */
+    width : 30px;
+    float : right;
     margin-bottom : 10px;
-    text-align : right;
     cursor : pointer;
     font-size : 30px;
     font-weight : bold;
